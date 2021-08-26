@@ -43,6 +43,7 @@ class _HomeState extends State<Home> {
                   ],
             ),
             Row(
+              mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 // ignore: deprecated_member_use
                 RaisedButton(onPressed: () {} ,
