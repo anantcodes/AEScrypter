@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:encrypt/encrypt.dart' as encrypt;
 
+import 'aes.dart';
+
 class Home extends StatefulWidget {
   @override
   _HomeState createState() => _HomeState();
@@ -46,11 +48,21 @@ class _HomeState extends State<Home> {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 // ignore: deprecated_member_use
-                RaisedButton(onPressed: () {} ,
+                RaisedButton(onPressed: () {
+                  plainText = tec.text;
+                  setState(() {
+                    encryptedText = AES.encryptAES(plainText);
+                  });
+                } ,
                   child: Text("Encrypt"),
                 ),
+                SizedBox(width: 10),
                 // ignore: deprecated_member_use
-                RaisedButton(onPressed: () {} ,
+                RaisedButton(onPressed: () {
+                  setState(() {
+                    encryptedText = AES.decryptAES(encryptedText);
+                  });
+                } ,
                   child: Text("Decrypt"),
                 )
               ],
