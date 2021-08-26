@@ -42,6 +42,18 @@ class _HomeState extends State<Home> {
                     )
                   ],
             ),
+            Row(
+              children: [
+                // ignore: deprecated_member_use
+                RaisedButton(onPressed: () {} ,
+                  child: Text("Encrypt"),
+                ),
+                // ignore: deprecated_member_use
+                RaisedButton(onPressed: () {} ,
+                  child: Text("Decrypt"),
+                )
+              ],
+            )
           ],
         ),
       ),
