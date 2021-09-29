@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:encrypt/encrypt.dart' as encrypt;
-
 import 'aes.dart';
 
 class Home extends StatefulWidget {
@@ -70,8 +69,6 @@ class _HomeState extends State<Home> {
           ],
         ),
       ),
-
-
     );
   }
 }

@@ -13,6 +13,7 @@ class AES {
     print(encrypted.base64);
     return encrypted;
   }
+
   static decryptAES(text) {
     return encrypter.decrypt(text,iv: iv);
   }
